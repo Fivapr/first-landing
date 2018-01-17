@@ -6,6 +6,15 @@ module.exports = {
   },
   module: {
     loaders: [
+      {
+        test: /\.(png|jpg|gif)$/,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {}
+          }
+        ]
+      },
       { test: /\.less$/,
           use: [{
                   loader: "style-loader" // creates style nodes from JS strings
